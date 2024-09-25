@@ -3,7 +3,7 @@ services:
     name: backend
     env: node
     plan: free
-    buildCommand: "cd backend && npm install"
+    buildCommand: "cd backend"
     startCommand: "node backend/app.js"
     autoDeploy: true
     
@@ -11,6 +11,6 @@ services:
     name: frontend
     env: static
     plan: free
-    buildCommand: "cd frontend && npm install && npm run build"
+    buildCommand: "cd frontend && npm run build"
     startCommand: "serve -s frontend/dist/frontend -l 3000"
     autoDeploy: true
