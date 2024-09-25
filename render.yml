@@ -8,7 +8,8 @@ services:
     autoDeploy: true
     github:
       branch: master
-      repo: Alena172/IPP  # Укажите здесь имя вашего репозитория
+      repo: Alena172/IPP
+
   - type: web
     name: frontend
     env: static
@@ -18,4 +19,4 @@ services:
     autoDeploy: true
     github:
       branch: master
-      repo: Alena172/IPP  # Укажите здесь имя вашего репозитория
+      repo: Alena172/IPP
