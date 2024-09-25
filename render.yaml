@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    autoDeploy: true
+    github:
+      branch: master
+      repo: Alena172/IPP  # Укажите здесь имя вашего репозитория
+  - type: web
+    name: frontend
+    env: static
+    buildCommand: npm install && npm run build
+    publishDir: dist/frontend
+    plan: free
+    autoDeploy: true
+    github:
+      branch: master
+      repo: Alena172/IPP  # Укажите здесь имя вашего репозитория
