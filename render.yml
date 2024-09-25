@@ -2,21 +2,21 @@ services:
   - type: web
     name: backend
     env: node
-    buildCommand: npm install
-    startCommand: npm start
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
     plan: free
     autoDeploy: true
     github:
       branch: master
-      repo: Alena172/IPP
+      repo: <ваш_репозиторий_с_бэкендом>
 
   - type: web
     name: frontend
     env: static
-    buildCommand: npm install && npm run build
-    publishDir: dist/frontend
+    buildCommand: cd frontend && npm install && npm run build
+    publishDir: frontend/dist
     plan: free
     autoDeploy: true
     github:
       branch: master
-      repo: Alena172/IPP
+      repo: <ваш_репозиторий_с_фронтендом>
